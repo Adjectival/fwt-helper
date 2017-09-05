@@ -94,4 +94,10 @@ export class AppComponent {
   showDetails(clickedHero: Hero) {
     this.selectedHero = clickedHero;
   }
+  finishedEditing() {
+    this.selectedHero = null;
+  }
+  addHero(newHeroFromChild: Hero) {
+    this.masterHeroList.push(newHeroFromChild);
+  }
 }

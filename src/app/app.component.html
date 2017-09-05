@@ -12,7 +12,16 @@
     [childHeroList]="masterHeroList"
     (clickSender)="showDetails($event)"
   >
+    <edit-hero
+    [childSelectedHero]="selectedHero"
+    (doneClickedSender)="finishedEditing()"
+    >
+    </edit-hero>
   </hero-list>
+  <new-hero
+    (newHeroSender)="addHero($event)"
+  >
+  </new-hero>
 </body>
 
 <footer>

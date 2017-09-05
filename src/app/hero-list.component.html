@@ -1,0 +1,19 @@
+<select (change)="onChange($event.target.value)" class="filter">
+  <option value="all" selected="selected">Show All</option>
+  <option value="isParty">Show Party</option>
+  <option value="notParty">Show Not Party</option>
+</select>
+<select (change)="propertyChange($event.target.value)" class="filter">
+  <option value="all" selected="selected">Show All</option>
+  <option value="Rock">Rock</option>
+  <option value="Scissors">Scissors</option>
+  <option value="Paper">Paper</option>
+</select>
+<div *ngFor="let currentHero of childHeroList | completeness:selectedCompleteness | property:selectedProperty">
+  <div class="heroBox">
+    <hero-display [hero]="currentHero"></hero-display>
+    <h4>Property: {{ currentHero.property }}</h4>
+    <h4>Type: {{ currentHero.type }}</h4>
+    <button (click)="editButtonHasBeenClicked(currentHero)">Edit</button>
+  </div>
+</div>
