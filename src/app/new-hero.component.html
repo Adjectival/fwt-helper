@@ -1,0 +1,34 @@
+<h1>New Hero</h1>
+<div>
+  <label>Enter Hero Id:</label><input #newId>
+</div>
+<div>
+  <label>Enter Hero Name:</label><input #newName>
+</div>
+<div>
+  <label>Select Property:</label>
+    <select #newProperty>
+      <option value="rock">Rock</option>
+      <option value="scissor" selected="selected">Scissor</option>
+      <option value="paper">Paper</option>
+    </select>
+</div>
+<div>
+  <label>Select Type:</label>
+    <select #newType>
+      <option value="areaattack">AreaAttack</option>
+      <option value="attack">Attack</option>
+      <option value="balance" selected="selected">Balance</option>
+      <option value="defense">Defense</option>
+      <option value="support">Support</option>
+    </select>
+</div>
+<div>
+  <button (click)="
+        addClicked(newId.value, newName.value, newProperty.value, newType.value);
+        newId.value='';
+        newDescription.value='';
+        newProperty.value='';
+        newType.value='';
+      ">Add</button>
+</div>
