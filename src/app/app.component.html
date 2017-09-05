@@ -7,22 +7,21 @@
   </div>
 </header>
 
-<body>
-  <hero-list
+  <app-hero-list
     [childHeroList]="masterHeroList"
     (clickSender)="showDetails($event)"
   >
-    <edit-hero
+    <app-edit-hero
     [childSelectedHero]="selectedHero"
     (doneClickedSender)="finishedEditing()"
     >
-    </edit-hero>
-  </hero-list>
-  <new-hero
+    </app-edit-hero>
+  </app-hero-list>
+  <app-new-hero
     (newHeroSender)="addHero($event)"
   >
-  </new-hero>
-</body>
+  </app-new-hero>
+
 
 <footer>
   <h5 class="credit mt-2" style="text-align:center"><a target="_blank" href="https://alexanderjacks.com">Alexander Jacks Consulting</a></h5>

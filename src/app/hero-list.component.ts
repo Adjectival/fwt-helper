@@ -1,6 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { Hero } from './hero.model';
+import { NewHeroComponent } from './new-hero.component';
+import { EditHeroComponent } from './edit-hero.component';
+import { Hero } from './hero';
 @Component({
   selector: 'app-hero-list',
   templateUrl: './hero-list.component.html',

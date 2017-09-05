@@ -1,0 +1,26 @@
+<div *ngIf="childSelectedHero">
+  <h1>Edit Hero</h1>
+  <div>
+    <label>Enter Hero Name:</label>
+    <input [(ngModel)]="childSelectedHero.name">
+  </div>
+  <div>
+    <label>Enter Hero Property:</label>
+    <select [(ngModel)]="childSelectedHero.property">
+          <option value="rock">Rock</option>
+          <option value="scissor" selected="selected">Scissor</option>
+          <option value="paper">Paper</option>
+        </select>
+  </div>
+  <div>
+    <label>Type</label>
+    <select [(ngModel)]="childSelectedHero.type">
+      <option value="areaattack">AreaAttack</option>
+      <option value="attack">Attack</option>
+      <option value="balance" selected="selected">Balance</option>
+      <option value="defense">Defense</option>
+      <option value="support">Support</option>
+    </select>
+    <button (click)="doneClicked()">Done</button>
+  </div>
+</div>

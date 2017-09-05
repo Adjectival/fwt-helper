@@ -9,9 +9,9 @@
   <option value="Scissors">Scissors</option>
   <option value="Paper">Paper</option>
 </select>
-<div *ngFor="let currentHero of childHeroList | completeness:selectedCompleteness | property:selectedProperty">
-  <div class="heroBox">
-    <hero-display [hero]="currentHero"></hero-display>
+<div *ngFor="let currentHero of childHeroList">
+  <div class="card">
+    <app-hero [hero]="currentHero"></app-hero>
     <h4>Property: {{ currentHero.property }}</h4>
     <h4>Type: {{ currentHero.type }}</h4>
     <button (click)="editButtonHasBeenClicked(currentHero)">Edit</button>

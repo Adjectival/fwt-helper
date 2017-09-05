@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
 import { Hero } from './hero';
-
+import { HeroListComponent } from './hero-list.component';
+import { NewHeroComponent } from './new-hero.component';
+import { EditHeroComponent } from './edit-hero.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +12,7 @@ import { Hero } from './hero';
 export class AppComponent {
   title = 'Fantasy War Tactics Helper';
 
-  public masterTaskList: Hero[] = [
+  public masterHeroList: Hero[] = [
     new Hero(1, "Momo","rock","Attack"),
     new Hero(2, "Mu","paper","Balance"),
     new Hero(3, "Carrot","paper","Attack"),
