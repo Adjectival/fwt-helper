@@ -1,15 +1,28 @@
-<select (change)="onChange($event.target.value)" class="filter">
-  <option value="all" selected="selected">Show All</option>
-  <option value="isParty">Show Party</option>
-  <option value="notParty">Show Not Party</option>
-</select>
-<select (change)="propertyChange($event.target.value)" class="filter">
-  <option value="all" selected="selected">Show All</option>
-  <option value="Rock">Rock</option>
-  <option value="Scissors">Scissors</option>
-  <option value="Paper">Paper</option>
-</select>
-<div *ngFor="let currentHero of childHeroList">
+<div class="row">
+<select 
+  (change)="propertyChange($event.target.value)" class="btn col btn-lg btn-primary filter">
+    <option value="all" selected="selected">All Properties</option>
+    <option value="Rock">Rock</option>
+    <option value="Scissors">Scissors</option>
+    <option value="Paper">Paper</option>
+  </select>
+  <select 
+  (change)="onChange($event.target.value)" class="btn col filter">
+    <option value="all" selected="selected">_broken_</option>
+    <option value="isParty">Show Party</option>
+    <option value="notParty">Show Not Party</option>
+  </select>
+  <select 
+  (change)="typeChange($event.target.value)" class="btn col btn-lg btn-danger filter">
+    <option value="all" selected="selected">All Types</option>
+    <option value="AreaAttack">AreaAttack</option>
+    <option value="Attack">Attack</option>
+    <option value="Balance">Balance</option>
+    <option value="Defense">Defense</option>
+    <option value="Support">Support</option>
+  </select>
+</div>
+<div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType">
   <div class="card">
     <app-hero [hero]="currentHero"></app-hero>
     <h4>Property: {{ currentHero.property }}</h4>

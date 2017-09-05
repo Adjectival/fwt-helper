@@ -8,6 +8,8 @@ import { HeroListComponent } from './hero-list.component';
 import { HeroComponent } from './hero.component';
 import { EditHeroComponent } from './edit-hero.component';
 import { NewHeroComponent } from './new-hero.component';
+import { PropertyPipe } from './property.pipe';
+import { TypePipe } from './type.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { NewHeroComponent } from './new-hero.component';
     HeroListComponent,
     HeroComponent,
     EditHeroComponent,
-    NewHeroComponent
+    NewHeroComponent,
+    PropertyPipe,
+    TypePipe
   ],
   imports: [
     BrowserModule,

@@ -1,21 +1,30 @@
-<header>
+<header style="background:papayawhip;">
 <div style="text-align:center">
   <h1>
     {{title}}
   </h1>
+  <h6>
+    <i class="em em-page_facing_up"></i>
+    <i class="em em-arrows_counterclockwise"></i>
+    <i class="em em-gem"></i>
+    <i class="em em-large_blue_circle"></i>
+    <i class="em em-heart_decoration"></i>
+    <i class="em em-scissors"></i>
+    <i class="em em-large_orange_diamond"></i>
+    <i class="em em-eight_spoked_asterisk"></i>
+  </h6>
   <img width="" src="https://vignette3.wikia.nocookie.net/fwt/images/e/e3/Illust_Yekaterina_01.png/revision/latest?cb=20160123021259">
   </div>
 </header>
 
-  <app-hero-list
+  <app-edit-hero [childSelectedHero]="selectedHero" (doneClickedSender)="finishedEditing()">
+  </app-edit-hero>
+
+  <app-hero-list style="text-align:center"
     [childHeroList]="masterHeroList"
     (clickSender)="showDetails($event)"
   >
-    <app-edit-hero
-    [childSelectedHero]="selectedHero"
-    (doneClickedSender)="finishedEditing()"
-    >
-    </app-edit-hero>
+    
   </app-hero-list>
   <app-new-hero
     (newHeroSender)="addHero($event)"
