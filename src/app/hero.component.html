@@ -1,5 +1,5 @@
 <div>
   <input *ngIf="hero.party === true" type="checkbox" checked (click)="toggleParty(false)" />
   <input *ngIf="hero.party === false" type="checkbox" (click)="toggleParty(true)" />
-  <label>{{ hero.name }}</label>
+  <label><h5 class="d-inline">#{{ hero.id }} </h5><h2 class="d-inline">{{ hero.name }}</h2></label>
 </div>

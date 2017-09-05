@@ -12,14 +12,19 @@ export class HeroListComponent {
   @Input() childHeroList: Hero[];
   @Output() clickSender = new EventEmitter();
   public selectedCompleteness: string = 'notDone';
-  public selectedPriority: string = 'all';
+  public selectedProperty: string = 'all';
+  public selectedType: string = 'all';
   onChange(optionFromMenu) {
     this.selectedCompleteness = optionFromMenu;
     console.log(this.selectedCompleteness);
   }
-  priorityChange(optionFromMenu) {
-    this.selectedPriority = optionFromMenu;
-    console.log(this.selectedPriority);
+  propertyChange(optionFromMenu) {
+    this.selectedProperty = optionFromMenu;
+    console.log(this.selectedProperty);
+  }
+  typeChange(optionFromMenu) {
+    this.selectedType = optionFromMenu;
+    console.log(this.selectedType);
   }
   editButtonHasBeenClicked(heroToEdit: Hero) {
     this.clickSender.emit(heroToEdit);
