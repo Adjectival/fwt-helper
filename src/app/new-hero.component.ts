@@ -13,5 +13,3 @@ export class NewHeroComponent {
     this.newHeroSender.emit(newHeroToAdd);
   }
 }
-
-

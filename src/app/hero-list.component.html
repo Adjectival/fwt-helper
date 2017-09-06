@@ -23,10 +23,12 @@
   </select>
 </div>
 <div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType">
-  <div class="card">
-    <app-hero [hero]="currentHero"></app-hero>
-    <h4>Property: {{ currentHero.property }}</h4>
-    <h4>Type: {{ currentHero.type }}</h4>
+  <div class="card flex-row">
+    <app-hero [hero]="currentHero" class="col"></app-hero>
+    <div class="col">
+      <h4>Property: {{ currentHero.property }}</h4>
+      <h4>Type: {{ currentHero.type }}</h4>
+    </div>
     <button (click)="editButtonHasBeenClicked(currentHero)">Edit</button>
   </div>
 </div>
