@@ -6,6 +6,9 @@
   <label>Enter Hero Name:</label><input #newName>
 </div>
 <div>
+  <label>Enter Hero Img URL:</label><input #newImgurl>
+</div>
+<div>
   <label>Select Property:</label>
     <select #newProperty>
       <option value="Rock">Rock</option>
@@ -25,10 +28,11 @@
 </div>
 <div>
   <button (click)="
-        addClicked(newId.value, newName.value, newProperty.value, newType.value);
-        newId.value='';
+        addClicked(newName.value, newProperty.value, newType.value, newImgurl.value, newId.value);
         newName.value='';
         newProperty.value='';
         newType.value='';
+        newImgurl.value='';
+        newId.value='';
       ">Add</button>
 </div>

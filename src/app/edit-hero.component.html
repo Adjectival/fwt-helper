@@ -1,11 +1,19 @@
 <div *ngIf="childSelectedHero">
   <h1>Edit Hero</h1>
   <div>
-    <label>Enter Hero Name:</label>
+    <label>Hero Name:</label>
     <input [(ngModel)]="childSelectedHero.name">
   </div>
   <div>
-    <label>Enter Hero Property:</label>
+    <label>Hero Img URL:</label>
+    <input [(ngModel)]="childSelectedHero.imgurl">
+  </div>
+  <div>
+    <label>Hero ID:</label>
+    <input [(ngModel)]="childSelectedHero.id">
+  </div>
+  <div>
+    <label>Hero Property:</label>
     <select [(ngModel)]="childSelectedHero.property">
           <option value="Rock">Rock</option>
           <option value="Scissors" selected="selected">Scissors</option>
