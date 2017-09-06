@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row ">
 <select 
   (change)="propertyChange($event.target.value)" class="btn col btn-lg btn-primary filter">
     <option value="all" selected="selected">All Properties</option>
@@ -15,19 +15,35 @@
   <select 
   (change)="typeChange($event.target.value)" class="btn col btn-lg btn-danger filter">
     <option value="all" selected="selected">All Types</option>
-    <option value="AreaAttack">AreaAttack</option>
-    <option value="Attack">Attack</option>
-    <option value="Balance">Balance</option>
-    <option value="Defense">Defense</option>
-    <option value="Support">Support</option>
+    <option value="AreaAttack">
+      AreaAttack</option>
+    <option value="Attack">
+      Attack</option>
+    <option value="Balance">
+      Balance</option>
+    <option value="Defense">
+      Defense</option>
+    <option value="Support">
+      Support</option>
   </select>
 </div>
 <div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType">
   <div class="card flex-row">
     <app-hero [hero]="currentHero" class="col"></app-hero>
     <div class="col">
-      <h4>Property: {{ currentHero.property }}</h4>
-      <h4>Type: {{ currentHero.type }}</h4>
+      <h4>
+        <img src="../assets/fwticon_r.png" *ngIf="currentHero.property === 'Rock'" />
+        <img src="../assets/fwticon_s.png" *ngIf="currentHero.property === 'Scissors'" />
+        <img src="../assets/fwticon_p.png" *ngIf="currentHero.property === 'Paper'" />
+      : {{currentHero.property}}</h4>
+      <h4>
+        <img src="../assets/fwticon_a.png" *ngIf="currentHero.type === 'AreaAttack'" />
+        <img src="../assets/fwticon_t.png" *ngIf="currentHero.type === 'Attack'" />
+        <img src="../assets/fwticon_b.png" *ngIf="currentHero.type === 'Balance'" />
+        <img src="../assets/fwticon_d.png" *ngIf="currentHero.type === 'Defense'" />
+        <img src="../assets/fwticon_o.png" *ngIf="currentHero.type === 'Support'" />
+      : {{currentHero.type}}</h4>
+
     </div>
     <button (click)="editButtonHasBeenClicked(currentHero)">Edit</button>
   </div>

@@ -10,7 +10,7 @@ import { EditHeroComponent } from './edit-hero.component';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'Fantasy War Tactics Helper';
+  title = 'Fantasy War Tactics R Helper';
 
   public masterHeroList: Hero[] = [
 new Hero("Alex", "Paper", "Balance", "https://vignette.wikia.nocookie.net/fwt/images/f/f3/Illust_Alex_01.png/revision/latest/scale-to-width-down/270?cb=20160123020948", 31),
@@ -77,7 +77,7 @@ new Hero("Ramlethal_Valentine", "Scissors", "AreaAttack", "../assets/ramlethal.j
 new Hero("Raskreia", "Scissors", "AreaAttack", "https://vignette.wikia.nocookie.net/fwt/images/d/dd/Illust_Raskreia_01.png/revision/latest/scale-to-width-down/270?cb=20160425033929", 25),
 new Hero("Reina", "Scissors", "Balance", "https://vignette4.wikia.nocookie.net/fwt/images/d/d7/Illust_Reina_01.png/revision/latest/scale-to-width-down/270?cb=20160730012159", 61),
 new Hero("Serendi", "Rock", "Balance", "https://vignette2.wikia.nocookie.net/fwt/images/d/d4/Illust_Serendi_01.png/revision/latest/scale-to-width-down/270?cb=20160123021257", 15),
-new Hero("Serphina", "Scissors", "AreaAttack", "../assets/serphina.jpg", 65),
+new Hero("Serphina", "Scissors", "AreaAttack", "../assets/serphina.png", 65),
 new Hero("Shark", "Scissors", "Balance", "https://vignette2.wikia.nocookie.net/fwt/images/c/c0/Illust_Shark_01.png/revision/latest/scale-to-width-down/270?cb=20160123021257", 36),
 new Hero("Shu-Shu", "Rock", "Support", "https://vignette3.wikia.nocookie.net/fwt/images/5/5e/Illust_Shu-Shu_01.png/revision/latest/scale-to-width-down/270?cb=20160123021257", 39),
 new Hero("Sione", "Scissors", "Attack", "https://vignette4.wikia.nocookie.net/fwt/images/b/b2/Illust_Sione_01.png/revision/latest/scale-to-width-down/270?cb=20160123021258", 70),
@@ -87,7 +87,7 @@ new Hero("Spooky", "Rock", "Support", "https://vignette.wikia.nocookie.net/fwt/i
 new Hero("Sraka", "Scissors", "Attack", "https://vignette.wikia.nocookie.net/fwt/images/8/8a/Illust_Sraka_01.png/revision/latest/scale-to-width-down/270?cb=20160123021258", 11),
 new Hero("Taehwa", "Scissors", "Balance", "https://vignette2.wikia.nocookie.net/fwt/images/5/5e/Illust_Taehwa_01.png/revision/latest/scale-to-width-down/270?cb=20170831020127", 75),
 new Hero("Tao", "Scissors", "Attack", "https://vignette3.wikia.nocookie.net/fwt/images/0/00/Illust_Tao_01.png/revision/latest/scale-to-width-down/270?cb=20160123021259", 35),
-new Hero("Thanatos", "Rock", "Balance", "../assets/thanatos.jpg", 66),
+new Hero("Thanatos", "Rock", "Balance", "../assets/thanatos.png", 66),
 new Hero("Unknown", "Rock", "Attack", "https://vignette.wikia.nocookie.net/fwt/images/9/93/Illust_Unknown_01.png/revision/latest/scale-to-width-down/270?cb=20160123021259", 41),
 new Hero("Valkyrie", "Paper", "Defense", "https://vignette3.wikia.nocookie.net/fwt/images/4/4f/Illust_Valkyrie_01.png/revision/latest/scale-to-width-down/270?cb=20160609012917", 27),
 new Hero("Yeka", "Rock", "Balance", "../assets/yeka.jpg", 74),
