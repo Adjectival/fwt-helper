@@ -8,11 +8,16 @@ import { Hero } from './hero';
 })
 export class HeroComponent {
   @Input() hero: Hero;
+  public partyStatus: string = 'inParty';
   toggleParty(inParty: boolean) {
     this.hero.party = inParty;
     console.log('party change!');
   }
   toggleProperty(setProperty: string) {
     this.hero.property = setProperty;
+  }
+  onChange(optionFromMenu) {
+    this.partyStatus = optionFromMenu;
+    console.log(this.partyStatus);
   }
 }

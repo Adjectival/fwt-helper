@@ -15,10 +15,7 @@ export class HeroListComponent {
   public selectedProperty: string = 'all';
   public selectedType: string = 'all';
 
-  onChange(optionFromMenu) {
-    this.partyStatus = optionFromMenu;
-    console.log(this.partyStatus);
-  }
+  
   propertyChange(optionFromMenu) {
     this.selectedProperty = optionFromMenu;
     console.log(this.selectedProperty);

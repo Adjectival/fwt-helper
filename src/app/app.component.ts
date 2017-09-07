@@ -11,6 +11,7 @@ import { EditHeroComponent } from './edit-hero.component';
 })
 export class AppComponent {
   title = 'Fantasy War Tactics R Helper';
+  instructions = 'Please click a hero to add to party. Sort army list with buttons.';
 
   public masterHeroList: Hero[] = [
 new Hero("Alex", "Paper", "Balance", "https://vignette.wikia.nocookie.net/fwt/images/f/f3/Illust_Alex_01.png/revision/latest/scale-to-width-down/270?cb=20160123020948", 31),

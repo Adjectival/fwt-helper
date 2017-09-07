@@ -1,6 +1,12 @@
 <div>
-  <div><img src={{hero.imgurl}} class="small_img"/></div>
-  <input *ngIf="hero.party === true" type="checkbox" checked (click)="toggleParty(false)" />
-  <input *ngIf="hero.party === false" type="checkbox" (click)="toggleParty(true)" />
-  <label><h5 class="d-inline">#{{ hero.id }} </h5><h2 class="d-inline">{{ hero.name }}</h2></label>
+  <img src={{hero.imgurl}}
+    *ngIf="hero.party === true" (click)="toggleParty(false)"
+    (change)="onChange($event.target.value)" class="btn filter small-img"
+  />
+  <img src={{hero.imgurl}}
+    *ngIf="hero.party === false" (click)="toggleParty(true)"
+    (change)="onChange($event.target.value)" class="btn filter framed-img"
+  />
+  <label class="d-inline id-tag">#{{ hero.id }}</label>
+  <label class="d-inline name-tag">{{ hero.name }}</label>
 </div>
