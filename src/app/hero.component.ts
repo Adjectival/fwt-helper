@@ -16,8 +16,8 @@ export class HeroComponent {
   toggleProperty(setProperty: string) {
     this.hero.property = setProperty;
   }
-  onChange(optionFromMenu) {
-    this.partyStatus = optionFromMenu;
+  onChange(changed) {
+    this.partyStatus = changed;
     console.log(this.partyStatus);
   }
 }

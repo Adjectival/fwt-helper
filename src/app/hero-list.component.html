@@ -1,6 +1,6 @@
 <div class="navbar sticky-top my-0">
-  <div class="testzone row">
-    <div *ngFor="let currentHero of childHeroList" class="party-hero">
+  <div class="testzone row my-0">
+    <div *ngFor="let currentHero of childHeroList" class="party-hero my-0">
       <span *ngIf="currentHero.party==true">
           <app-hero [hero]="currentHero" class="col"></app-hero>
       </span>
