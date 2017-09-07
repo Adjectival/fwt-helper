@@ -8,8 +8,9 @@ import { Hero } from './hero';
 })
 export class HeroComponent {
   @Input() hero: Hero;
-  toggleParty(setParty: boolean) {
-    this.hero.party = setParty;
+  toggleParty(inParty: boolean) {
+    this.hero.party = inParty;
+    console.log('party change!');
   }
   toggleProperty(setProperty: string) {
     this.hero.property = setProperty;

@@ -11,12 +11,13 @@ import { Hero } from './hero';
 export class HeroListComponent {
   @Input() childHeroList: Hero[];
   @Output() clickSender = new EventEmitter();
-  public selectedCompleteness: string = 'notDone';
+  public partyStatus: string = 'all';
   public selectedProperty: string = 'all';
   public selectedType: string = 'all';
+
   onChange(optionFromMenu) {
-    this.selectedCompleteness = optionFromMenu;
-    console.log(this.selectedCompleteness);
+    this.partyStatus = optionFromMenu;
+    console.log(this.partyStatus);
   }
   propertyChange(optionFromMenu) {
     this.selectedProperty = optionFromMenu;

@@ -73,7 +73,7 @@ new Hero("Raboff", "Paper", "Defense", "https://vignette1.wikia.nocookie.net/fwt
 new Hero("Rachel", "Paper", "AreaAttack", "https://vignette.wikia.nocookie.net/fwt/images/d/d4/Illust_Rachel_Alucard_01.png/revision/latest/scale-to-width-down/270?cb=20161224050029", 53),
 new Hero("Rage", "Rock", "Attack", "https://vignette.wikia.nocookie.net/fwt/images/7/72/Illust_Rage_01.png/revision/latest/scale-to-width-down/270?cb=20160123021256", 14),
 new Hero("Ragna", "Scissors", "Attack", "https://vignette1.wikia.nocookie.net/fwt/images/9/93/Illust_Ragna_01.png/revision/latest/scale-to-width-down/270?cb=20161224045615", 51),
-new Hero("Ramlethal_Valentine", "Scissors", "AreaAttack", "../assets/ramlethal.jpg", 77),
+new Hero("Ramlethal", "Scissors", "AreaAttack", "../assets/ramlethal.jpg", 77),
 new Hero("Raskreia", "Scissors", "AreaAttack", "https://vignette.wikia.nocookie.net/fwt/images/d/dd/Illust_Raskreia_01.png/revision/latest/scale-to-width-down/270?cb=20160425033929", 25),
 new Hero("Reina", "Scissors", "Balance", "https://vignette4.wikia.nocookie.net/fwt/images/d/d7/Illust_Reina_01.png/revision/latest/scale-to-width-down/270?cb=20160730012159", 61),
 new Hero("Serendi", "Rock", "Balance", "https://vignette2.wikia.nocookie.net/fwt/images/d/d4/Illust_Serendi_01.png/revision/latest/scale-to-width-down/270?cb=20160123021257", 15),

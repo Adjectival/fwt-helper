@@ -1,12 +1,19 @@
 # FwtHelper
+![screenshot](src/assets/sshot.png)
 ## @Adjectival
 
 Currently a party manager for the game Fantasy War Tactics. Build a team of heroes from the list of all available-- sort this list so you can build the ideal team, fast.
+Features to implement:
+ - data service to allow for edit / add to persist
+ - visual display of choices for party (enable checkboxes)
+ -- integrate/refactor party dropdown feature
 
 
 ## Deets
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+
+All intellectual property copyright respective owners.
 
 ## Development server
 

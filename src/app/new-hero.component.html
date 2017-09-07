@@ -1,4 +1,4 @@
-<h1>Recruit New Hero!</h1>
+<h1>Recruit New Hero! Theoretically. WIP <i class="em em-construction"></i></h1>
 <div>
   <label>Enter Hero Id:</label><input #newId>
 </div>
@@ -27,7 +27,8 @@
     </select>
 </div>
 <div>
-  <button (click)="
+  <button class="btn btn-lg btn-success"
+    (click)="
         addClicked(newName.value, newProperty.value, newType.value, newImgurl.value, newId.value);
         newName.value='';
         newProperty.value='';

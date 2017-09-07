@@ -10,6 +10,7 @@ import { EditHeroComponent } from './edit-hero.component';
 import { NewHeroComponent } from './new-hero.component';
 import { PropertyPipe } from './property.pipe';
 import { TypePipe } from './type.pipe';
+import { InPartyPipe } from './in-party.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TypePipe } from './type.pipe';
     EditHeroComponent,
     NewHeroComponent,
     PropertyPipe,
-    TypePipe
+    TypePipe,
+    InPartyPipe
   ],
   imports: [
     BrowserModule,

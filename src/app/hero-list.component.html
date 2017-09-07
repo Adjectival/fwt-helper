@@ -1,33 +1,43 @@
-<div class="row ">
-<select 
-  (change)="propertyChange($event.target.value)" class="btn col btn-lg btn-primary filter">
-    <option value="all" selected="selected">All Properties</option>
-    <option value="Rock">Rock</option>
-    <option value="Scissors">Scissors</option>
-    <option value="Paper">Paper</option>
-  </select>
-  <select 
-  (change)="onChange($event.target.value)" class="btn col filter">
-    <option value="all" selected="selected">_broken_</option>
-    <option value="isParty">Show Party</option>
-    <option value="notParty">Show Not Party</option>
-  </select>
-  <select 
-  (change)="typeChange($event.target.value)" class="btn col btn-lg btn-danger filter">
-    <option value="all" selected="selected">All Types</option>
-    <option value="AreaAttack">
-      AreaAttack</option>
-    <option value="Attack">
-      Attack</option>
-    <option value="Balance">
-      Balance</option>
-    <option value="Defense">
-      Defense</option>
-    <option value="Support">
-      Support</option>
-  </select>
+<div class="navbar sticky-top my-0">
+  <div class="row">
+    <div class="col bg-faded testzone">
+      <ul *ngFor="let currentHero of childHeroList" class="list-inline">
+        <li *ngIf="currentHero.party==true" class="list-inline-item">{{currentHero.name}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <select 
+      (change)="propertyChange($event.target.value)" class="btn col btn-lg btn-primary filter">
+        <option value="all" selected="selected">All Properties</option>
+        <option value="Rock">Rock</option>
+        <option value="Scissors">Scissors</option>
+        <option value="Paper">Paper</option>
+    </select>
+    <select 
+      (change)="onChange($event.target.value)" class="btn col filter">
+      <option value="all" selected="selected">list all heroes</option>
+      <option value="inParty">list Party</option>
+      <option value="notParty">list not Party</option>
+    </select>
+    <select 
+      (change)="typeChange($event.target.value)" class="btn col btn-lg btn-danger filter">
+      <option value="all" selected="selected">All Types</option>
+      <option value="AreaAttack">
+        AreaAttack</option>
+      <option value="Attack">
+        Attack</option>
+      <option value="Balance">
+        Balance</option>
+      <option value="Defense">
+        Defense</option>
+      <option value="Support">
+        Support</option>
+    </select>
+  </div>
 </div>
-<div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType">
+
+<div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType | inParty:partyStatus">
   <div class="card flex-row">
     <app-hero [hero]="currentHero" class="col"></app-hero>
     <div class="col">
