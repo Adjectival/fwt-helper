@@ -14,13 +14,7 @@
         <option value="Scissors">Scissors</option>
         <option value="Paper">Paper</option>
     </select>
-    <select 
-      (change)="onChange($event.target.value)" class="btn col filter"
-      class="hide-me">
-      <option value="notParty" selected="selected">list not Party</option>
-      <option value="all">list all heroes</option>
-      <option value="inParty">list Party</option>
-    </select>
+    
     <select 
       (change)="typeChange($event.target.value)" class="btn col btn-lg btn-danger filter">
       <option value="all" selected="selected">All Types</option>
