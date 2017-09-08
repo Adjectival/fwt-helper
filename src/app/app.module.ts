@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroListComponent } from './hero-list.component';
 import { HeroComponent } from './hero.component';
+import { HeroService } from './hero.service';
 import { EditHeroComponent } from './edit-hero.component';
 import { NewHeroComponent } from './new-hero.component';
 import { PropertyPipe } from './property.pipe';
@@ -27,7 +28,7 @@ import { InPartyPipe } from './in-party.pipe';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
