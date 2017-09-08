@@ -27,12 +27,25 @@
     </select>
 </div>
 <div>
+  <label>Select Terrain:</label>
+    <select #newTerr1>
+      <option value="Grass">Grass</option>
+      <option value="Thornbush">Thornbush</option>
+      <option value="Water" selected="selected">Water</option>
+      <option value="Swamp">Swamp</option>
+      <option value="Poison">Poison</option>
+      <option value="Lava">Lava</option>
+      <option value="Glacier">Glacier</option>
+    </select>
+</div>
+<div>
   <button class="btn btn-lg btn-success"
     (click)="
         addClicked(newName.value, newProperty.value, newType.value, newImgurl.value, newId.value);
         newName.value='';
         newProperty.value='';
         newType.value='';
+        newTerr1.value='';
         newImgurl.value='';
         newId.value='';
       ">Add</button>
