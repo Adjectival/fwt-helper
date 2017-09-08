@@ -47,4 +47,5 @@ export class TypePipe implements PipeTransform {
     } else if (desiredType == "all") {
       return input;
     }
-  }}
+  }
+}

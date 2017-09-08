@@ -14,6 +14,7 @@ export class HeroListComponent {
   public partyStatus: string = 'all';
   public selectedProperty: string = 'all';
   public selectedType: string = 'all';
+  public selectedTerr1: string = 'all';
 
   
   propertyChange(optionFromMenu) {
@@ -24,9 +25,9 @@ export class HeroListComponent {
     this.selectedType = optionFromMenu;
     console.log(this.selectedType);
   }
-  editButtonHasBeenClicked(heroToEdit: Hero) {
-    this.clickSender.emit(heroToEdit);
+  terr1Change(optionFromMenu) {
+    this.selectedTerr1 = optionFromMenu;
+    console.log(this.selectedTerr1);
   }
-
 
 }

@@ -8,8 +8,8 @@ import { Hero } from './hero';
 })
 export class NewHeroComponent {
   @Output() newHeroSender = new EventEmitter();
-  addClicked(name: string, property: string, type: string, imgurl: string, id: number) {
-    var newHeroToAdd: Hero = new Hero(name, property, type, imgurl, id);
+  addClicked(name: string, property: string, type: string, terr1: string, imgurl: string, id: number) {
+    var newHeroToAdd: Hero = new Hero(name, property, type, terr1, imgurl, id);
     this.newHeroSender.emit(newHeroToAdd);
   }
 }

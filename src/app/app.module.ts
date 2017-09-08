@@ -12,6 +12,7 @@ import { NewHeroComponent } from './new-hero.component';
 import { PropertyPipe } from './property.pipe';
 import { TypePipe } from './type.pipe';
 import { InPartyPipe } from './in-party.pipe';
+import { Terr1Pipe } from './terr1.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { InPartyPipe } from './in-party.pipe';
     NewHeroComponent,
     PropertyPipe,
     TypePipe,
-    InPartyPipe
+    InPartyPipe,
+    Terr1Pipe
   ],
   imports: [
     BrowserModule,
