@@ -18,19 +18,11 @@
 </div>
 </header>
 
-  <app-edit-hero [childSelectedHero]="selectedHero" (doneClickedSender)="finishedEditing()">
-  </app-edit-hero>
-
   <app-hero-list style="text-align:center"
     [childHeroList]="masterHeroList"
     (clickSender)="showDetails($event)"
   >
-
   </app-hero-list>
-  <app-new-hero
-    (newHeroSender)="addHero($event)"
-  >
-  </app-new-hero>
 
 
 <footer>
