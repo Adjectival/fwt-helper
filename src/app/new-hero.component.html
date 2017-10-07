@@ -6,6 +6,15 @@
   <label>Enter Hero Name:</label><input #newName>
 </div>
 <div>
+  <label>Enter Ally Name:</label><input #newAlly1>
+</div>
+<div>
+  <label>Enter Ally Name:</label><input #newAlly2>
+</div>
+<div>
+  <label>Enter Ally Name:</label><input #newAlly3>
+</div>
+<div>
   <label>Enter Hero Img URL:</label><input #newImgurl>
 </div>
 <div>
@@ -41,12 +50,15 @@
 <div>
   <button class="btn btn-lg btn-success"
     (click)="
-        addClicked(newName.value, newProperty.value, newType.value, newTerr1.value, newImgurl.value, newId.value);
+        addClicked(newName.value, newProperty.value, newType.value, newTerr1.value, newImgurl.value, newAlly1.value, newAlly2.value, newAlly3.value, newId.value);
         newName.value='';
         newProperty.value='';
         newType.value='';
         newTerr1.value='';
         newImgurl.value='';
+        newAlly1.value='';
+        newAlly2.value='';
+        newAlly3.value='';
         newId.value='';
       ">Add</button>
 </div>
