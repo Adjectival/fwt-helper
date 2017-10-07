@@ -22,9 +22,11 @@ export const HEROES: Hero[] = [
     {name: "Dominique", property: "Rock", type: "Attack", terr1: "Thornbush", imgurl: "../assets/Dominique.png", id: 23, party: false, ally1: "Henry", ally2: "Lily", ally3: "Angela"},
     {name: "Elektra", property: "Scissors", type: "Support", terr1: "Thornbush", imgurl: "../assets/Elektra.png", id: 54, party: false, ally1: "Ian", ally2: "Carrot", ally3: "Kitty"},
     {name: "Evan", property: "Scissors", type: "AreaAttack", terr1: "Lava", imgurl: "../assets/Evan.png", id: 57, party: false, ally1: "Mercedes", ally2: "Phantom", ally3: "Luminous"},
+    {name: "Eunwol", property: "Paper", type: "Defense", terr1: "Water", imgurl: "../assets/Eunwol.jpg", id: 57, party: false, ally1: "Aran", ally2: "Luminous", ally3: "Evan"},
     {name: "Frankenstein", property: "Scissors", type: "Attack", terr1: "Poison", imgurl: "../assets/Frankenstein.png", id: 24, party: false, ally1: "Seira", ally2: "Alfred", ally3: "Raskreia"},
     {name: "Fruel", property: "Scissors", type: "Attack", terr1: "Thornbush", imgurl: "../assets/Fruel.png", id: 48, party: false, ally1: "Lily", ally2: "Azrael", ally3: "Nirvana"},
     {name: "Gillan", property: "Rock", type: "Support", terr1: "Poison", imgurl: "../assets/Gillan.png", id: 19, party: false, ally1: "Henry", ally2: "Muang", ally3: "Zero"},
+    {name: "Hella", property: "Rock", type: "Support", terr1: "Water", imgurl: "../assets/Hella.png", id: 19, party: false, ally1: "Lee", ally2: "Klein", ally3: "Unknown"},
     {name: "Henry", property: "Rock", type: "Attack", terr1: "Swamp", imgurl: "../assets/Henry.png", id: 34, party: false, ally1: "Dominique", ally2: "Angela", ally3: "Lily"},
     {name: "Hongyeom", property: "Rock", type: "AreaAttack", terr1: "Lava", imgurl: "../assets/hongyeom.png", id: 72, party: false, ally1: "Mas", ally2: "Lena", ally3: "Sonic_Boom"},
     {name: "Ian", property: "Rock", type: "Balance", terr1: "Thornbush", imgurl: "../assets/Ian.png", id: 9, party: false, ally1: "Serendi", ally2: "Jin", ally3: "Chenny"},
@@ -84,5 +86,6 @@ export const HEROES: Hero[] = [
     {name: "Unknown", property: "Rock", type: "Attack", terr1: "Water", imgurl: "../assets/Unknown.png", id: 41, party: false, ally1: "Nirvana", ally2: "Shu-Shu", ally3: "Belle"},
     {name: "Valkyrie", property: "Paper", type: "Defense", terr1: "Thornbush", imgurl: "../assets/Valkyrie.png", id: 27, party: false, ally1: "Chris", ally2: "Kai", ally3: "Alfred"},
     {name: "Yeka", property: "Rock", type: "Balance", terr1: "Water", imgurl: "../assets/Yeka.png", id: 74, party: false, ally1: "Celestial", ally2: "Yekaterina", ally3: "Carrot"},
+    {name: "Yekaterina", property: "Rock", type: "AreaAttack", terr1: "Water", imgurl: "../assets/Yekaterina.png", id: 74, party: false, ally1: "Chenny", ally2: "Deborah", ally3: "Klein"},
     {name: "Zero", property: "Rock", type: "Balance", terr1: "Poison", imgurl: "../assets/Zero.png", id: 46, party: false, ally1: "Cleo", ally2: "Momo", ally3: "Sione"},
 ];
