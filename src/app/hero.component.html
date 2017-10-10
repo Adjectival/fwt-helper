@@ -1,6 +1,5 @@
 <div class="py-2 row">
   <div class="col align-self-center">
-
     <img src={{hero.imgurl}}
       *ngIf="hero.party === true" (click)="toggleParty(false)"
       (change)="onChange($event.target.value)" class="btn filter p-0 small-img"
@@ -9,8 +8,5 @@
       *ngIf="hero.party === false" (click)="toggleParty(true)"
       (change)="onChange($event.target.value)" class="btn filter p-0 framed-img"
     />
-
-    <h2 class="name-tag shadow-text-1">{{ hero.name }}</h2>
-
   </div>
 </div>
