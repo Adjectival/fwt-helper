@@ -1,3 +1,5 @@
+@import "bourbon/bourbon"
+@import "saffron/saffron"
 .testzone
     border: 2px
     padding-left: 3vw
@@ -27,8 +29,8 @@ h4 ~ .ally-pic
 
 
 .Scissors
-    background-color: forestgreen
+    @include linear-gradient(to right, forestgreen, papayawhip)
 .Paper
-    background-color: steelblue
+    @include linear-gradient(to right, steelblue, papayawhip)
 .Rock
-    background-color: darksalmon
+    @include linear-gradient(to right, darksalmon, papayawhip)
