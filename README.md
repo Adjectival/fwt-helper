@@ -1,13 +1,16 @@
-# FwtHelper
+# [FwtHelper](https://fwt-helper.firebaseapp.com/)
 ![screenshot](src/assets/sshot.png)
 ## @Adjectival
 
 Currently a party manager for the game Fantasy War Tactics. Build a team of heroes from the list of all available-- sort this list so you can build the ideal team, fast.
 Features to implement:
  - data service to allow for edit / add to persist
- - more data per hero, such as allies
+ - improve layout, make responsive across desktop and larger device screens
+ - clean up UI, make hero cards more compact without losing any information
 
+## GCP site
 
+[Here is the app](https://fwt-helper.firebaseapp.com/), on Google Cloud Platform's Firebase hosting service.
 
 ## Deets
 
