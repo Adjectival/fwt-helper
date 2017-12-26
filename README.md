@@ -2,17 +2,19 @@
 ![screenshot](src/assets/sshot.png)
 ## @Adjectival
 
-Currently a party manager for the game Fantasy War Tactics. Build a team of heroes from the list of all available-- sort this list so you can build the ideal team, fast.
+A personnel manager for heroes in the game 'Fantasy War Tactics R'. Build a team of heroes from the list of all available-- sort this list so you can build the ideal team for the battle, fast.
+
 Features to implement:
- - data service to allow for edit / add to persist
  - improve layout, make responsive across desktop and larger device screens
  - clean up UI, make hero cards more compact without losing any information
+ - inject New Relic performance monitoring tool
+ - data service to allow for edit / add to persist
 
-## GCP site
+## Live site
 
 [Here is the app](https://fwt-helper.firebaseapp.com/), on Google Cloud Platform's Firebase hosting service.
 
-## Deets
+## Attribution
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
