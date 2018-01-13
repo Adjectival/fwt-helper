@@ -59,25 +59,34 @@
 
 
     <div class="card {{currentHero.property}}">
-
       <div class="row">
-        <div class="col-7">
-          <app-hero [hero]="currentHero"></app-hero>
-          <h2 class="name-tag shadow-text-1">{{currentHero.name}}</h2>
-        </div>
         <div class="col-5">
-          <h4 class="mt-3">Attributes</h4>
+          <app-hero [hero]="currentHero"></app-hero>
+        </div>
+        <div class="col-7">
+
+        <div class="grouping-box">
+          <h3 class="name-tag shadow-text-1">{{currentHero.name}}</h3>
           <img class="d-inline mx-2" src="../assets/fwticon_{{currentHero.property}}.png" alt='currentHero.property' />
           <img class="d-inline mx-2" src="../assets/fwticon_{{currentHero.type}}.png" alt='currentHero.type' />
           <img class="d-inline mx-2" src="../assets/fwticon_{{currentHero.terr1}}.png" alt='currentHero.terr1' />
+        </div>
 
-          <h4 class="mt-3">Allies</h4>
-          <img class="ally-pic" src="../assets/{{currentHero.ally1}}.png" alt='{{currentHero.ally1}}' />
-          <img class="ally-pic" src="../assets/{{currentHero.ally2}}.png" alt='{{currentHero.ally2}}' />
-          <img class="ally-pic" src="../assets/{{currentHero.ally3}}.png" alt='{{currentHero.ally3}}' />
         </div>
       </div>
-
+      <div class="row">
+        <div class="col">
+            <div class="row">
+                <img class="ally-pic" src="../assets/{{currentHero.ally1}}.png" alt='{{currentHero.ally1}}' />
+            </div>
+            <div class="row">
+                <img class="ally-pic" src="../assets/{{currentHero.ally2}}.png" alt='{{currentHero.ally2}}' />
+            </div>
+            <div class="row">
+                <img class="ally-pic" src="../assets/{{currentHero.ally3}}.png" alt='{{currentHero.ally3}}' />
+            </div>
+        </div>
+      </div>
     </div>
 
 
