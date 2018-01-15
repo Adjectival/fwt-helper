@@ -1,3 +1,10 @@
+@import "bourbon/bourbon"
+@import "saffron/saffron"
+.btn
+  &:hover
+    @include pulsate()
+  &:active
+    @include bounce()
 .small-img
     max-width: 18vw
     max-height: 18vh
