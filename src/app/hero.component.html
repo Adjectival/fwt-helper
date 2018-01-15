@@ -1,5 +1,4 @@
-<div class="py-2 row">
-  <div class="col-4 align-self-center">
+<div class="col-3 d-inline">
     <img src={{hero.imgurl}}
       *ngIf="hero.party === true" (click)="toggleParty(false)"
       (change)="onChange($event.target.value)" class="btn filter p-0 small-img"
@@ -8,14 +7,12 @@
       *ngIf="hero.party === false" (click)="toggleParty(true)"
       (change)="onChange($event.target.value)" class="btn filter p-0 framed-img"
     />
-  </div>
-  <div class="col align-self-center">
+</div>
 
-    <h3 class="name-tag shadow-text-1">{{hero.name}}</h3>
+<div class="col-9 d-inline">
+    <h3 class="shadow-text">{{hero.name}}</h3>
     <img class="d-inline mx-2" src="../assets/fwticon_{{hero.property}}.png" alt='hero.property' />
     <img class="d-inline mx-2" src="../assets/fwticon_{{hero.type}}.png" alt='hero.type' />
     <img class="d-inline mx-2" src="../assets/fwticon_{{hero.terr1}}.png" alt='hero.terr1' />
     <img class="d-inline mx-2" src="../assets/fwticon_{{hero.terr2}}.png" alt='No 2nd terrain' />
-
-  </div>
 </div>

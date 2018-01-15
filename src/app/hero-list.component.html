@@ -4,7 +4,7 @@
       <span *ngIf="currentHero.party==true" class="">
 
 
-        <app-hero [hero]="currentHero" class=""></app-hero>
+        <app-hero [hero]="currentHero" style="width:100%;"></app-hero>
 
 
         <div class="col">
@@ -56,11 +56,11 @@
     <div class="card {{currentHero.property}}">
 
       <div class="row grouping-box">
-          <app-hero [hero]="currentHero"></app-hero>
+          <app-hero [hero]="currentHero" style="width:100%;"></app-hero>
       </div>
       <div class="row">
 
-        <div class="col-4 grouping-box">
+        <div class="col-4 grouping-box p-0">
             <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
             <div *ngIf="currentHero.ally1==allyHero.name">
             <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally1}}.png" alt='{{currentHero.ally1}}' />
@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <div class="col-4 grouping-box">
+        <div class="col-4 grouping-box p-0">
             <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
             <div *ngIf="currentHero.ally2==allyHero.name">
             <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally2}}.png" alt='{{currentHero.ally2}}' />
@@ -84,7 +84,7 @@
             </div>
         </div>
 
-        <div class="col-4 grouping-box">
+        <div class="col-4 grouping-box p-0">
             <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
             <div *ngIf="currentHero.ally3==allyHero.name">
             <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally3}}.png" alt='{{currentHero.ally3}}' />
