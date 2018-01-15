@@ -11,7 +11,8 @@ import { NewHeroComponent } from './new-hero.component';
 })
 export class AppComponent implements OnInit {
   title = 'Fantasy War Tactics R Helper';
-  instructions = 'Please click a hero to add to party. Sort army list with buttons.';
+  instructions = 'Click a hero image to add to party. Sort army list with dropdown buttons.';
+  ETH = 'Donate ETH: 0xE3f8c25C959aFc77DDcdbD0b3E83466cc1702b8e';
 
   heroes: Hero[];
   masterHeroList: Hero[];
