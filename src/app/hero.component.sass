@@ -5,18 +5,25 @@
     @include pulsate()
   &:active
     @include bounce()
-.shadow-text
-    font: 150%
+
+.list-name
+    font-size: 150%
     font-family: georgia
+    color: black
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4)
-.small-img
-    max-width: 18vw
-    max-height: 18vh
-    border-width: 2px
-    border-color: darkgrey
-    border-style: groove
-.framed-img
-    width: 30vw
+.party-name
+    font-size: 80%
+    color: navy
+
+.party-img
+    width: 20vw
     border-width: 4px
     border-color: darkgrey
     border-style: groove
+.framed-img
+    position: center
+    clip: rect(0px,200px,50px,0px)
+    max-width: 100vw
+
+h4 ~ img
+    max-width: 30%
