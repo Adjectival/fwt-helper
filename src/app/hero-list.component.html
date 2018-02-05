@@ -1,111 +1,119 @@
 <div class="navbar sticky-top m-0 p-0 b-0">
-  <div class="partyzone m-0 p-0">
-    <div *ngFor="let currentHero of childHeroList" class="">
-      <span *ngIf="currentHero.party==true" class="d-flex flex-row">
+    <div class="partyzone m-0 p-0">
+        <div *ngFor="let currentHero of childHeroList" class="">
+            <span *ngIf="currentHero.party === true" class="d-flex flex-row">
 
-        <app-hero [hero]="currentHero" class="col-6 pl-1"></app-hero>
+                <div class="{{currentHero.property}} mx-0 p-0 by-0">
+                    <app-hero [hero]="currentHero" class=""></app-hero>
+                </div>
 
-        <div *ngFor="let allyHero of childHeroList">
-            <div *ngIf="currentHero.ally1==allyHero.name" class="">
-            <img class="{{allyHero.property}} ally-pic my-0" src="../assets/{{currentHero.ally1}}_sm.png" alt='{{currentHero.ally1}}' />
-            <h5 class="">{{allyHero.name}}</h5>
-            </div>
-            <div *ngIf="currentHero.ally2==allyHero.name" class="">
-            <img class="{{allyHero.property}} ally-pic my-0" src="../assets/{{currentHero.ally2}}_sm.png" alt='{{currentHero.ally2}}' />
-            <h5 class="">{{allyHero.name}}</h5>
-            </div>
-            <div *ngIf="currentHero.ally3==allyHero.name" class="">
-            <img class="{{allyHero.property}} ally-pic my-0" src="../assets/{{currentHero.ally3}}_sm.png" alt='{{currentHero.ally3}}' />
-            <h5 class="">{{allyHero.name}}</h5>
-            </div>
-        </div>
+                <div *ngFor="let allyHero of childHeroList">
+                    <div *ngIf="currentHero.ally1==allyHero.name" class="{{allyHero.property}} p-2">
+                        <img class="{{allyHero.property}} ally-pic my-0" src="../assets/{{currentHero.ally1}}_sm.png" alt='{{currentHero.ally1}}' style="width:60%; height:60%"/>
+                        <h5 class="p-0">{{allyHero.name}}</h5>
+                        <img class="mx-1" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                        <img class="mx-1" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' style="width:60%; height:60%" />
+                    </div>
+                    <div *ngIf="currentHero.ally2==allyHero.name" class="{{allyHero.property}} p-2">
+                        <img class="{{allyHero.property}} ally-pic my-0" src="../assets/{{currentHero.ally2}}_sm.png" alt='{{currentHero.ally2}}' style="width:60%; height:60%"/>
+                        <h5 class="p-0">{{allyHero.name}}</h5>
+                        <img class="mx-1" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                        <img class="mx-1" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' style="width:60%; height:60%" />
+                    </div>
+                    <div *ngIf="currentHero.ally3==allyHero.name" class="{{allyHero.property}} p-2">
+                        <img class="ally-pic my-0" src="../assets/{{currentHero.ally3}}_sm.png" alt='{{currentHero.ally3}}' style="width:60%; height:60%"/>
+                        <h5 class="p-0">{{allyHero.name}}</h5>
+                        <img class="mx-1" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                        <img class="mx-1" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' style="width:60%; height:60%" />
+                    </div>
+                </div>
 
-      </span>
-    </div>
-  </div>
-  <div class="row">
-    <select
-      (change)="propertyChange($event.target.value)" class="btn col btn-lg color1 filter">
-        <option value="all" selected="selected">All Properties</option>
-        <option value="Rock">Rock</option>
-        <option value="Scissors">Scissors</option>
-        <option value="Paper">Paper</option>
-    </select>
-
-    <select
-      (change)="typeChange($event.target.value)" class="btn col btn-lg color2 filter">
-      <option value="all" selected="selected">All Types</option>
-      <option value="AreaAttack">AreaAttack</option>
-      <option value="Attack">Attack</option>
-      <option value="Balance">Balance</option>
-      <option value="Defense">Defense</option>
-      <option value="Support">Support</option>
-    </select>
-
-    <select
-      (change)="terr1Change($event.target.value)" class="btn col btn-lg color3 filter">
-      <option value="all" selected="selected">All Terrain</option>
-      <option value="Grass">Grass</option>
-      <option value="Thornbush">Thornbush</option>
-      <option value="Water">Water</option>
-      <option value="Swamp">Swamp</option>
-      <option value="Poison">Poison</option>
-      <option value="Lava">Lava</option>
-      <option value="Glacier">Glacier</option>
-    </select>
-
-  </div>
-</div>
-
-<div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType | terr1:selectedTerr1">
-  <div *ngIf="currentHero.party==false">
-
-    <div class="card {{currentHero.property}}">
-
-      <div class="row grouping-box">
-          <app-hero [hero]="currentHero" style="width:100%;"></app-hero>
-      </div>
-      <div class="row">
-
-        <div class="col-4 grouping-box p-0">
-            <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
-            <div *ngIf="currentHero.ally1==allyHero.name">
-            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally1}}.png" alt='{{currentHero.ally1}}' />
-            <h5>{{allyHero.name}}</h5>
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
-            </div>
-            </div>
-        </div>
-
-        <div class="col-4 grouping-box p-0">
-            <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
-            <div *ngIf="currentHero.ally2==allyHero.name">
-            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally2}}.png" alt='{{currentHero.ally2}}' />
-            <h5>{{allyHero.name}}</h5>
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
-            </div>
-            </div>
-        </div>
-
-        <div class="col-4 grouping-box p-0">
-            <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
-            <div *ngIf="currentHero.ally3==allyHero.name">
-            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally3}}.png" alt='{{currentHero.ally3}}' />
-            <h5>{{allyHero.name}}</h5>
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
-            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
-            </div>
-            </div>
+            </span>
         </div>
     </div>
+    <div class="row">
+        <select
+        (change)="propertyChange($event.target.value)" class="btn col btn-lg color1 filter">
+            <option value="all" selected="selected">All Properties</option>
+            <option value="Rock">Rock</option>
+            <option value="Scissors">Scissors</option>
+            <option value="Paper">Paper</option>
+        </select>
+
+        <select
+        (change)="typeChange($event.target.value)" class="btn col btn-lg color2 filter">
+            <option value="all" selected="selected">All Types</option>
+            <option value="AreaAttack">AreaAttack</option>
+            <option value="Attack">Attack</option>
+            <option value="Balance">Balance</option>
+            <option value="Defense">Defense</option>
+            <option value="Support">Support</option>
+        </select>
+
+        <select
+        (change)="terr1Change($event.target.value)" class="btn col btn-lg color3 filter">
+            <option value="all" selected="selected">All Terrain</option>
+            <option value="Grass">Grass</option>
+            <option value="Thornbush">Thornbush</option>
+            <option value="Water">Water</option>
+            <option value="Swamp">Swamp</option>
+            <option value="Poison">Poison</option>
+            <option value="Lava">Lava</option>
+            <option value="Glacier">Glacier</option>
+        </select>
 
     </div>
+    </div>
+
+    <div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType | terr1:selectedTerr1">
+    <div *ngIf="currentHero.party==false">
+
+        <div class="card {{currentHero.property}}">
+
+            <div class="row grouping-box">
+                <app-hero [hero]="currentHero" style="width:100%;"></app-hero>
+            </div>
+            <div class="row">
+
+                <div class="col-4 grouping-box p-0 m-0">
+                    <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
+                        <div *ngIf="currentHero.ally1==allyHero.name">
+                            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally1}}.png" alt='{{currentHero.ally1}}' />
+                            <h5>{{allyHero.name}}</h5>
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 grouping-box p-0 m-0">
+                    <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
+                        <div *ngIf="currentHero.ally2==allyHero.name">
+                            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally2}}.png" alt='{{currentHero.ally2}}' />
+                            <h5>{{allyHero.name}}</h5>
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 grouping-box p-0 m-0">
+                    <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
+                        <div *ngIf="currentHero.ally3==allyHero.name">
+                            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally3}}.png" alt='{{currentHero.ally3}}' />
+                            <h5>{{allyHero.name}}</h5>
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                            <img class="d-inline mx-2" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 
-  </div>
+    </div>
 </div>
