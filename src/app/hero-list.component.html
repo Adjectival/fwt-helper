@@ -1,27 +1,27 @@
 <div class="navbar sticky-top">
-    <div class="partyzone container">
+    <div class="partyzone container-fluid px-0">
         <div *ngFor="let currentHero of childHeroList">
-            <span *ngIf="currentHero.party === true" class="row">
+            <span *ngIf="currentHero.party === true" class="d-flex flex-row partyrow">
 
-                <div class="{{currentHero.property}} col-3">
-                    <app-hero [hero]="currentHero" class=""></app-hero>
+                <div class="{{currentHero.property}}">
+                    <app-hero [hero]="currentHero" class="col-5"></app-hero>
                 </div>
 
                 <div *ngFor="let allyHero of childHeroList">
-                    <div *ngIf="currentHero.ally1==allyHero.name" class="{{allyHero.property}} col-4">
-                        <img class="{{allyHero.property}} ally-pic" src="../assets/{{currentHero.ally1}}_sm.png" alt='{{currentHero.ally1}}' />
+                    <div *ngIf="currentHero.ally1==allyHero.name" class="{{allyHero.property}} col">
+                        <img class="party-ally" src="../assets/{{currentHero.ally1}}_sm.png" alt='{{currentHero.ally1}}' />
                         <h5 class="">{{allyHero.name}}</h5>
                         <img class="" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
                         <img class="" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
                     </div>
-                    <div *ngIf="currentHero.ally2==allyHero.name" class="{{allyHero.property}} col-4">
-                        <img class="{{allyHero.property}} ally-pic" src="../assets/{{currentHero.ally2}}_sm.png" alt='{{currentHero.ally2}}' />
+                    <div *ngIf="currentHero.ally2==allyHero.name" class="{{allyHero.property}} col">
+                        <img class="party-ally" src="../assets/{{currentHero.ally2}}_sm.png" alt='{{currentHero.ally2}}' />
                         <h5 class="">{{allyHero.name}}</h5>
                         <img class="" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
                         <img class="" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
                     </div>
-                    <div *ngIf="currentHero.ally3==allyHero.name" class="{{allyHero.property}} col-4">
-                        <img class="ally-pic" src="../assets/{{currentHero.ally3}}_sm.png" alt='{{currentHero.ally3}}' />
+                    <div *ngIf="currentHero.ally3==allyHero.name" class="{{allyHero.property}} col">
+                        <img class="party-ally" src="../assets/{{currentHero.ally3}}_sm.png" alt='{{currentHero.ally3}}' />
                         <h5 class="">{{allyHero.name}}</h5>
                         <img class="" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
                         <img class="" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
@@ -78,7 +78,7 @@
                 <div class="col-4 grouping-box px-0 mx-0">
                     <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
                         <div *ngIf="currentHero.ally1==allyHero.name">
-                            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally1}}.png" alt='{{currentHero.ally1}}' />
+                            <img class="army-ally" src="../assets/{{currentHero.ally1}}.png" alt='{{currentHero.ally1}}' />
                             <h5>{{allyHero.name}}</h5>
                             <img class="d-inline float-left pl-3" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
                             <img class="d-inline " src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
@@ -90,7 +90,7 @@
                 <div class="col-4 grouping-box px-0 mx-0">
                     <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
                         <div *ngIf="currentHero.ally2==allyHero.name">
-                            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally2}}.png" alt='{{currentHero.ally2}}' />
+                            <img class="army-ally" src="../assets/{{currentHero.ally2}}.png" alt='{{currentHero.ally2}}' />
                             <h5>{{allyHero.name}}</h5>
                             <img class="d-inline float-left pl-2" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
                             <img class="d-inline " src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
@@ -102,7 +102,7 @@
                 <div class="col-4 grouping-box px-0 mx-0">
                     <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
                         <div *ngIf="currentHero.ally3==allyHero.name">
-                            <img class="ally-pic sub-pic" src="../assets/{{currentHero.ally3}}.png" alt='{{currentHero.ally3}}' />
+                            <img class="army-ally" src="../assets/{{currentHero.ally3}}.png" alt='{{currentHero.ally3}}' />
                             <h5>{{allyHero.name}}</h5>
                             <img class="d-inline float-left pl-2" src="../assets/fwticon_{{allyHero.property}}.png" alt='allyHero.property' />
                             <img class="d-inline " src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />

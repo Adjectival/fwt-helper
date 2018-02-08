@@ -1,13 +1,14 @@
-<div *ngIf="hero.party === true" class="d-flex flex-row">
+<div *ngIf="hero.party === true" class="row">
     <div class="col-8 pt-2">
-        <img src="{{hero.imgurl}}_sm.png" class=""
+        <img src="{{hero.imgurl}}.png" class=""
           (click)="toggleParty(false)"
           (change)="onChange($event.target.value)" class="btn filter party-img"
+
         />
         <h4 class="party-name">{{hero.name}}</h4>
     </div>
 
-    <div class="flex-column col-4">
+    <div class="flex-column col-4 pl-0">
         <img class="" src="../assets/fwticon_{{hero.type}}.png" alt='hero.type' />
         <img class="" src="../assets/fwticon_{{hero.terr1}}.png" alt='hero.terr1' />
         <div *ngIf="hero.terr2">
