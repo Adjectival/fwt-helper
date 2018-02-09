@@ -3,8 +3,14 @@
         <div *ngFor="let currentHero of childHeroList">
             <span *ngIf="currentHero.party === true" class="d-flex flex-row partyrow">
 
-                <div class="{{currentHero.property}}">
-                    <app-hero [hero]="currentHero" class="col-5"></app-hero>
+                <div class="{{currentHero.property}} party-hero">
+                    <app-hero [hero]="currentHero" class=""></app-hero>
+                    <!-- icons exported from hero.component  -->
+                    <div class="">
+                        <img class="" src="../assets/fwticon_{{currentHero.type}}.png" alt='currentHero.type' />
+                        <img class="" src="../assets/fwticon_{{currentHero.terr1}}.png" alt='currentHero.terr1' />
+                        <img class="" src="../assets/fwticon_{{currentHero.terr2}}.png" alt='currentHero.terr2' />
+                    </div>
                 </div>
 
                 <div *ngFor="let allyHero of childHeroList">
