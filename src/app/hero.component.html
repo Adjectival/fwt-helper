@@ -1,5 +1,5 @@
 <div *ngIf="hero.party === true" class="row">
-    <div class="col-8 pt-2">
+    <div class="col-7">
         <img src="{{hero.imgurl}}.png" class=""
           (click)="toggleParty(false)"
           (change)="onChange($event.target.value)" class="btn filter party-img"
@@ -8,7 +8,7 @@
         <h4 class="party-name">{{hero.name}}</h4>
     </div>
 
-    <div class="flex-column col-4 pl-0">
+    <div class="col-5 flex-column justify-content-center pl-0">
         <img class="" src="../assets/fwticon_{{hero.type}}.png" alt='hero.type' />
         <img class="" src="../assets/fwticon_{{hero.terr1}}.png" alt='hero.terr1' />
         <div *ngIf="hero.terr2">
@@ -23,7 +23,7 @@
       (click)="toggleParty(true)"
       (change)="onChange($event.target.value)" class="btn filter framed-img"
     />
-    <h3 class="list-name">{{hero.name}}</h3>
+    <h3 class="army-name">{{hero.name}}</h3>
 
     <img class="inline" src="../assets/fwticon_{{hero.property}}.png" alt='hero.property' />
     <img class="inline" src="../assets/fwticon_{{hero.type}}.png" alt='hero.type' />
