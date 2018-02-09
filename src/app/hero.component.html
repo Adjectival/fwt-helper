@@ -1,11 +1,15 @@
 <div *ngIf="hero.party === true" class="">
     <div class="">
-        <img src="{{hero.imgurl}}.png" class=""
+        <img src="{{hero.imgurl}}.png"
           (click)="toggleParty(false)"
-          (change)="onChange($event.target.value)" class="btn filter party-img"
-
+          (change)="onChange($event.target.value)"
+          class="btn filter party-img"
         />
-        <h4 class="party-name">{{hero.name}}</h4>
+        <img src="../assets/fwticon_{{hero.type}}.png"
+            alt='hero.type'
+            class="hero-type-party d-inline"
+        />
+        <h4 class="party-name d-inline">{{hero.name}}</h4>
     </div>
 </div>
 

@@ -1,6 +1,7 @@
 @import "bourbon/bourbon"
 @import "saffron/saffron"
 
+// sticky navbar classes
 .partyzone
     border: 8px
     border-color: black
@@ -17,9 +18,15 @@
     border-style: groove
     border-radius: 3px
 
-.party-hero
-    position: relative
-    text-align: center
+
+// positioning for icon overlay on hero image
+.hero-type-party
+    top: 8px
+    left: 10px
+    position: absolute
+
+
+// positioning for icon overlay on ally image
 .party-ally
     border-width: 2px
     border-style: groove
@@ -27,7 +34,30 @@
     margin-top: 8px
     width: 60px
     height: 60px
+    position: relative
+.ally-type-party
+    top: 6px
+    left: 10px
+    position: absolute
 
+// positioning for icon overlay of terrain icons hero & ally
+.terrain-anchor
+    position: relative
+.top-terrain
+    z-index: 4
+.hero-bottom-terrain
+    position: absolute
+    top: 0px
+    left: 65px
+    z-index: 3
+.ally-bottom-terrain
+    position: absolute
+    top: 0px
+    left: 25px
+    z-index: 2
+
+
+// army, bottom zone classes
 .army-ally
     border-width: 0px
     border-style: groove
