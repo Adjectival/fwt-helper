@@ -65,10 +65,6 @@
         </div>
     </div>
 
-    <!-- end party zone -->
-    </div>
-
-
     <!-- pipes to filter army -->
     <div class="row">
         <select
@@ -98,9 +94,12 @@
             <option value="Lava">Lava</option>
             <option value="Glacier">Glacier</option>
         </select>
-    </div>
-    <!-- army of heroes not in party -->
-    <div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType | terr1:selectedTerr1">
+    </div>    
+<!-- end party zone -->
+</div>
+
+<!-- army of heroes not in party -->
+<div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType | terr1:selectedTerr1">
     <div *ngIf="currentHero.party==false">
         <!-- row per hero -->
         <div  class="row {{currentHero.property}} mx-0">
