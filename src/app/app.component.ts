@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'Fantasy War Tactics R Helper';
   instructions = 'Click a hero image to add to party. Sort army list with dropdown buttons.';
   ETH = 'Donate ETH: 0xd74cb5c0e868B06DaEA6Bb25364dCF1f2C096855';
+  author = 'by Alexander Jacks';
 
   heroes: Hero[];
   masterHeroList: Hero[];
