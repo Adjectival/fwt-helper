@@ -1,4 +1,4 @@
-<div *ngIf="hero.party === true" class="">
+<div *ngIf="hero.party === true" class="party-type-anchor">
     <div class="">
         <img src="{{hero.imgurl}}.png"
           (click)="toggleParty(false)"
@@ -7,7 +7,7 @@
         />
         <img src="../assets/fwticon_{{hero.type}}.png"
             alt='hero.type'
-            class="hero-type-party d-inline"
+            class="hero-type-party"
         />
         <h4 class="party-name d-inline">{{hero.name}}</h4>
     </div>
