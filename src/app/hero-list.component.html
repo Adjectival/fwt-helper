@@ -1,55 +1,73 @@
-<div class="navbar sticky-top">
-    <div class="partyzone">
-        <div *ngFor="let currentHero of childHeroList">
-            <span *ngIf="currentHero.party === true" class="partyrow row">
-                <div class="{{currentHero.property}}">
-                    <app-hero [hero]="currentHero" class="col"></app-hero>
-                    <!-- terrain icons exported from hero.component  -->
+<!-- floating area for selected heroes, collapsed on app load -->
+<div class="navbar partyzone sticky-top p-0 m-0">
+    <table *ngFor="let currentHero of childHeroList">
+
+        <!-- hero conditional -->
+        <tr *ngIf="currentHero.party === true">
+        <td>
+            <!-- hero image and icons -->
+            <div class="{{currentHero.property}}">
+                <app-hero [hero]="currentHero" class="col"></app-hero>
+                <!-- terrain icons exported from hero.component  -->
+                <div class="terrain-anchor">
+                    <img class="top-terrain" src="../assets/fwticon_{{currentHero.terr1}}.png" alt='currentHero.terr1' />
+                    <img class="hero-bottom-terrain" src="../assets/fwticon_{{currentHero.terr2}}.png" alt='currentHero.terr2' />
+                </div>
+            </div>
+        </td>
+
+            <div *ngFor="let allyHero of childHeroList">
+
+                <!-- ally 1 -->
+                <td *ngIf="currentHero.ally1==allyHero.name" class="{{allyHero.property}} col">
+                    <span class="party-type-anchor">
+                        <img class="party-ally" src="../assets/{{currentHero.ally1}}_sm.png" alt='{{currentHero.ally1}}' />
+                        <img class="ally-type-party" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                    </span>
+                    <h5 class="">{{allyHero.name}}</h5>
                     <div class="terrain-anchor">
-                        <img class="top-terrain" src="../assets/fwticon_{{currentHero.terr1}}.png" alt='currentHero.terr1' />
-                        <img class="hero-bottom-terrain" src="../assets/fwticon_{{currentHero.terr2}}.png" alt='currentHero.terr2' />
+                        <img class="top-terrain" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
+                        <img class="ally-bottom-terrain" src="../assets/fwticon_{{allyHero.terr2}}.png" alt='allyHero.terr2' />
                     </div>
-                </div>
+                </td>
 
-                <div *ngFor="let allyHero of childHeroList">
-                    <div *ngIf="currentHero.ally1==allyHero.name" class="{{allyHero.property}} col">
-                        <span class="party-type-anchor">
-                            <img class="party-ally" src="../assets/{{currentHero.ally1}}_sm.png" alt='{{currentHero.ally1}}' />
-                            <img class="ally-type-party" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
-                        </span>
-                        <h5 class="">{{allyHero.name}}</h5>
-                        <div class="terrain-anchor">
-                            <img class="top-terrain" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
-                            <img class="ally-bottom-terrain" src="../assets/fwticon_{{allyHero.terr2}}.png" alt='allyHero.terr2' />
-                        </div>
+                <!-- ally 2 -->
+                <td *ngIf="currentHero.ally2==allyHero.name" class="{{allyHero.property}} col">
+                    <span class="party-type-anchor">
+                        <img class="party-ally" src="../assets/{{currentHero.ally2}}_sm.png" alt='{{currentHero.ally2}}' />
+                        <img class="ally-type-party" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                    </span>
+                    <h5 class="">{{allyHero.name}}</h5>
+                    <div class="terrain-anchor">
+                        <img class="top-terrain" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
+                        <img class="ally-bottom-terrain" src="../assets/fwticon_{{allyHero.terr2}}.png" alt='allyHero.terr2' />
                     </div>
-                    <div *ngIf="currentHero.ally2==allyHero.name" class="{{allyHero.property}} col">
-                        <span class="party-type-anchor">
-                            <img class="party-ally" src="../assets/{{currentHero.ally2}}_sm.png" alt='{{currentHero.ally2}}' />
-                            <img class="ally-type-party" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
-                        </span>
-                        <h5 class="">{{allyHero.name}}</h5>
-                        <div class="terrain-anchor">
-                            <img class="top-terrain" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
-                            <img class="ally-bottom-terrain" src="../assets/fwticon_{{allyHero.terr2}}.png" alt='allyHero.terr2' />
-                        </div>
-                    </div>
-                    <div *ngIf="currentHero.ally3==allyHero.name" class="{{allyHero.property}} col">
-                        <span class="party-type-anchor">
-                            <img class="party-ally" src="../assets/{{currentHero.ally3}}_sm.png" alt='{{currentHero.ally3}}' />
-                            <img class="ally-type-party" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
-                        </span>
-                        <h5 class="">{{allyHero.name}}</h5>
-                        <div class="terrain-anchor">
-                            <img class="top-terrain" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
-                            <img class="ally-bottom-terrain" src="../assets/fwticon_{{allyHero.terr2}}.png" alt='allyHero.terr2' />
-                        </div>
-                    </div>
-                </div>
+                </td>
 
-            </span>
-        </div>
+                <!-- ally 3 -->
+                <td *ngIf="currentHero.ally3==allyHero.name" class="{{allyHero.property}} col">
+                    <span class="party-type-anchor">
+                        <img class="party-ally" src="../assets/{{currentHero.ally3}}_sm.png" alt='{{currentHero.ally3}}' />
+                        <img class="ally-type-party" src="../assets/fwticon_{{allyHero.type}}.png" alt='allyHero.type' />
+                    </span>
+                    <h5 class="">{{allyHero.name}}</h5>
+                    <div class="terrain-anchor">
+                        <img class="top-terrain" src="../assets/fwticon_{{allyHero.terr1}}.png" alt='allyHero.terr1' />
+                        <img class="ally-bottom-terrain" src="../assets/fwticon_{{allyHero.terr2}}.png" alt='allyHero.terr2' />
+                    </div>
+                </td>
+
+            </div>
+
+        <!-- end hero conditional -->
+        </tr>
+    </table>
+
+    <!-- end party zone -->
     </div>
+
+
+    <!-- pipes to filter army -->
     <div class="row">
         <select
         (change)="propertyChange($event.target.value)" class="btn col btn-lg sort-btn-color filter">
@@ -58,7 +76,6 @@
             <option value="Scissors">Scissors</option>
             <option value="Paper">Paper</option>
         </select>
-
         <select
         (change)="typeChange($event.target.value)" class="btn col btn-lg sort-btn-color filter">
             <option value="all" selected="selected">All Types</option>
@@ -68,7 +85,6 @@
             <option value="Defense">Defense</option>
             <option value="Support">Support</option>
         </select>
-
         <select
         (change)="terr1Change($event.target.value)" class="btn col btn-lg sort-btn-color filter">
             <option value="all" selected="selected">All Terrain</option>
@@ -80,21 +96,20 @@
             <option value="Lava">Lava</option>
             <option value="Glacier">Glacier</option>
         </select>
-
     </div>
-    </div>
-
+    <!-- army of heroes not in party -->
     <div *ngFor="let currentHero of childHeroList | property:selectedProperty | type:selectedType | terr1:selectedTerr1">
     <div *ngIf="currentHero.party==false">
-        <div  class="row {{currentHero.property}} p-1">
+        <!-- row per hero -->
+        <div  class="row {{currentHero.property}} mx-0">
             <!-- begin left col -->
-            <div class="col-6 grouping-box">
+            <div class="col-6 px-0">
                 <div class="">
                     <app-hero [hero]="currentHero"></app-hero>
                 </div>
             </div>
             <!-- begin right col -->
-            <div class="col-6">
+            <div class="col-6 pr-0">
                 <div class="grouping-box">
                     <div *ngFor="let allyHero of childHeroList" class="{{allyHero.property}}">
                         <div *ngIf="currentHero.ally1==allyHero.name">

@@ -1,5 +1,5 @@
 <header>
-<div style="text-align:center">
+<div class="app-marquee">
   <h6>
     Intended for Educational Purposes Only: all IP Nexon&copy; &amp; NexonGT&copy;
   </h6>
@@ -19,9 +19,10 @@
 </div>
 </header>
 
-  <app-hero-list style="text-align:center"
+  <app-hero-list
     [childHeroList]="masterHeroList"
     (clickSender)="showDetails($event)"
+    class="app-itself"
   >
   </app-hero-list>
 
