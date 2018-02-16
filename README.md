@@ -19,7 +19,7 @@ A personnel manager for heroes in the game 'Fantasy War Tactics R'. Build a team
 
 ## Dev config & serve script :basketball:
 After clone and enter directory:
-`npm i && cd src/app && saffron install && ng serve`
+`npm i && ng serve`
 
 ## Attribution
 
