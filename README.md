@@ -1,6 +1,6 @@
 # [FwtHelper](https://fwt-helper.firebaseapp.com/)
 ![screenshot](src/assets/fwt_feb_sshot.png)
-## by [Adjectival](https://www.alexanderjacks.biz)
+## by [Adjectival](https://adjectival.github.io/portfolio5/)
 
 A personnel manager for heroes in the game 'Fantasy War Tactics R'. Build a team of heroes from the list of all available-- sort this list so you can build the ideal team for the battle, fast.
 
