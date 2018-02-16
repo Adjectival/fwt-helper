@@ -9,13 +9,17 @@ A personnel manager for heroes in the game 'Fantasy War Tactics R'. Build a team
 
 ### Features to implement :cyclone:
  - keep improving layout, make more responsive across tablet and desktop resolutions
- - inject New Relic performance monitoring tool
+ - data service (perhaps basic API) to allow for Update / Create on heroes
  - saving of pre-made parties
  - separate route for viewing created parties
- - saving favorite parties to user accounts
- - data service (perhaps basic API) to allow for Update / Create on heroes
  - authentication on WebFederated sites, to allow for user accounts
+ - saving favorite parties to user accounts
+ - inject New Relic performance monitoring tool
 
+
+## Dev config & serve script :basketball:
+After clone and enter directory:
+`npm i && cd src/app && saffron install && ng serve`
 
 ## Attribution
 

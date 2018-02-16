@@ -1,10 +1,11 @@
-@import "bourbon/bourbon"
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon"
 @import "saffron/saffron"
+
 .btn
-  &:hover
-    @include pulsate()
-  &:active
-    @include bounce()
+    &:hover
+        @include pulsate()
+    &:active
+        @include bounce()
 
 .army-name
     font-size: 150%
