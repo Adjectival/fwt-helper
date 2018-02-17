@@ -1,6 +1,12 @@
 @import "node_modules/bourbon/app/assets/stylesheets/bourbon"
 @import "saffron/saffron"
 
+.grouping-box
+    border-width: 2px
+    border-color: darkgrey
+    border-style: groove
+    border-radius: 3px
+
 // sticky navbar classes
 .partyzone
     border: 4px
@@ -12,36 +18,50 @@
 .sort-btn-color
     background: blanchedalmond
 
-.grouping-box
-    border-width: 2px
-    border-color: darkgrey
-    border-style: groove
-    border-radius: 3px
 
 
-// positioning for icon overlay on ally image
+// // party classes // //
+
 .party-ally
     border-width: 2px
     border-style: groove
     margin-top: 8px
     max-width: 60px
     max-height: 60px
-.party-type-anchor
     position: relative
-.ally-type-party
+    z-index: 12
+
+// positioning for icon overlay on ally image
+.party-ally-type
     top: 4px
     left: 2px
     position: absolute
-    z-index: 5
+    z-index: 13
+
+.party-ally-name
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white, -2px 2px 4px white, 2px -2px 4px white;      position: relative
+    z-index: 12
 
 
-.ally-bottom-terrain
+// positioning for terrain underlay for allies
+
+.ally-first-terrain
     position: absolute
-    top: 20px
-    z-index: -2
+    bottom: -5px
+    left: 5px
+    z-index: 10
+.ally-second-terrain
+    position: absolute
+    bottom: -18px
+    left: 5px
+    z-index: 9
 
 
-// army, bottom zone classes
+
+
+
+// // army, bottom zone classes // //
+
 .army-ally
     border-width: 0px
     border-style: groove
