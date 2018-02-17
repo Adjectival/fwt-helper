@@ -1,16 +1,23 @@
-<div *ngIf="hero.party === true" class="party-type-anchor">
-    <div class="">
-        <img src="{{hero.imgurl}}.png"
-          (click)="toggleParty(false)"
-          (change)="onChange($event.target.value)"
-          class="btn filter party-img"
-        />
-        <img src="../assets/fwticon_{{hero.type}}.png"
-            alt='hero.type'
-            class="hero-type-party"
-        />
-        <h4 class="party-name">{{hero.name}}</h4>
-    </div>
+<div *ngIf="hero.party === true" class="party-icons-anchor">
+    <img src="{{hero.imgurl}}.png"
+      (click)="toggleParty(false)"
+      (change)="onChange($event.target.value)"
+      class="btn filter party-img"
+    />
+    <!-- superpositioned icon, anchor atop component -->
+    <img src="../assets/fwticon_{{hero.type}}.png"
+        alt='hero.type'
+        class="hero-type-party"
+    />
+    <!-- superpositioned icons, anchor atop component -->
+    <img src="../assets/fwticon_{{hero.terr1}}.png" alt='hero.terr1'
+        class="hero-first-terrain"
+    />
+    <img src="../assets/fwticon_{{hero.terr2}}.png" alt='hero.terr2'
+        class="hero-second-terrain"
+    />
+
+    <h4 class="party-name">{{hero.name}}</h4>
 </div>
 
 

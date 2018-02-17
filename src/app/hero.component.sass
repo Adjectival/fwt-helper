@@ -16,6 +16,9 @@
     font-size: 120%
     font-family: georgia
     color: navy
+    text-shadow: 2px 2px 4px red, -2px -2px 4px red, -2px 2px 4px gold, 2px -2px 4px gold
+    z-index: 20
+    position: relative
 
 .party-img
     max-height: 15vh
@@ -26,17 +29,30 @@
     margin-left: 4px
     margin-top: 4px
 
-// positioning for icon overlay on hero image
-.party-type-anchor
+.party-icons-anchor
     position: relative
+
+// positioning for type icon overlay on hero image
 .hero-type-party
     top: 8px
     left: 10px
     position: absolute
 
+// positioning for terrain icons overlay on hero image
+.hero-first-terrain
+    position: absolute
+    bottom: 9px
+    right: 4px
+    z-index: 15
+.hero-second-terrain
+    position: absolute
+    bottom: 9px
+    left: 4px
+    z-index: 10
+
+
 .army-img
     position: center
-    max-width: fill-available
 
 h4 ~ img
     max-width: 30%
