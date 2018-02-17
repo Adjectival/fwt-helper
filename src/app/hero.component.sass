@@ -24,14 +24,14 @@
     transform: translate(-50%, 0%)
 
 
-.party-img
-    max-height: 12vh
+.party-hero
+    max-height: 13vh
     border-width: 2px
     border-color: darkgrey
     border-style: groove
-    padding: 0px
-    margin-left: 4px
+    margin-left: 14px
     margin-top: 4px
+    padding: 0px
 
 .party-icons-anchor
     position: relative
@@ -56,6 +56,13 @@
 
 .army-img
     position: center
+@media screen and (max-width: 425px) and (min-width: 1px)
+    .army-img
+        max-width: 90%
+@media screen and (max-width: 4096px) and (min-width: 426px)
+    .army-img
+        max-width: 100%
+
 
 h4 ~ img
     max-width: 30%
