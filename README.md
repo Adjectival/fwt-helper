@@ -17,7 +17,7 @@ A personnel manager for heroes in the game 'Fantasy War Tactics R'. Build a team
  - inject New Relic performance monitoring tool
 
 
-## Dev config & serve script :basketball:
+## Dev config & serve script :ice_cream:
 After clone and enter directory:
 `npm i && ng serve`
 
