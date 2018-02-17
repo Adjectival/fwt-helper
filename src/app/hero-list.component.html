@@ -1,13 +1,13 @@
 <!-- floating area for selected heroes, collapsed on app load -->
-<div class="navbar partyzone sticky-top m-0 pt-0">
+<div class="navbar partyzone sticky-top m-0 pt-0 px-0">
     <div *ngFor="let currentHero of childHeroList">
 
         <!-- hero conditional -->
         <div *ngIf="currentHero.party === true">
 
             <!-- hero image and icons -->
-            <div class="{{currentHero.property}} row d-flex justify-content-around">
-                <app-hero [hero]="currentHero" class="mr-4"></app-hero>
+            <div class="{{currentHero.property}} flex-row d-flex justify-content-around">
+                <app-hero [hero]="currentHero" class=""></app-hero>
 
                 <!-- build 2nd array -->
                 <div *ngFor="let allyHero of childHeroList" class="">
@@ -55,7 +55,7 @@
     </div>
 
     <!-- pipes to filter army -->
-    <div class="row">
+    <div class="flex-row d-flex justify-content-around">
         <select
         (change)="propertyChange($event.target.value)" class="btn col btn-lg sort-btn-color filter">
             <option value="all" selected="selected">All Properties</option>
